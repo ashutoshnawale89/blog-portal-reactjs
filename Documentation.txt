@@ -1,0 +1,21 @@
+🧠 BLOG APP (REACTJS)
+
+🎯 What are you building?
+
+        A Blog Application where:
+
+        Users can read blogs
+
+        Admin/Users can create, edit, delete posts
+
+        Posts have title, content, author, date, images
+
+        Authentication (login/signup)
+
+        Optional comments & likes
+
+🚀 PHASE 1: SETUP (START HERE)
+3️⃣ Create React App
+npx create-react-app blog-app
+cd blog-app
+npm start

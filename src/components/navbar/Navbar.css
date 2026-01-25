@@ -1,0 +1,128 @@
+/* ---------- Navbar ---------- */
+.navbar {
+  display: flex;
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #2c3e50;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  gap: 1rem; /* spacing between rows on wrap */
+}
+
+/* ---------- Brand ---------- */
+.navbar-brand h2 {
+  color: #fff;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* ---------- Menu ---------- */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 1rem; /* spacing between links */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+  background-color: #34495e;
+  color: #3498db;
+}
+
+/* ---------- Search Box ---------- */
+.big-search {
+  display: flex;
+  flex: 1; /* take remaining space between brand & menu */
+  max-width: 800px;
+  gap: 0;
+}
+
+.big-search input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 8px 0 0 8px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+
+.big-search button {
+  padding: 12px 24px;
+  border-radius: 0 8px 8px 0;
+  border: none;
+  background-color: #fff;
+  color: #0d6efd;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s ease;
+}
+
+.big-search button:hover {
+  background-color: #e6e6e6;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .big-search {
+    max-width: 500px; /* smaller on tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* stack brand, search, menu */
+    align-items: stretch;
+  }
+
+  .big-search {
+    flex-direction: column;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .big-search input,
+  .big-search button {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .big-search button {
+    margin-top: 8px;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .navbar-menu li a {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .big-search input,
+  .big-search button {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .navbar-brand h2 {
+    font-size: 1.25rem;
+  }
+}
