@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# build output
+dist/
+node_modules/
+
+# Java leftovers (ignore permanently)
+src/main/
+src/test/
+

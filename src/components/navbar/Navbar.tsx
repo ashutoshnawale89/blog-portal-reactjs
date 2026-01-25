@@ -6,7 +6,7 @@ const Navbar = () => {
 
   const [query, setQuery] = useState("");
 
-  const handleSearch =(e) => {
+  const handleSearch =(e:any) => {
     e.preventDefault();
     console.log("Searching for:", query);
     setQuery("");

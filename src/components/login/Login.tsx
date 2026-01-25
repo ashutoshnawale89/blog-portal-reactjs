@@ -1,13 +1,13 @@
-import { useState, useContext } from "react";
-import { useNavigate, Link } from 'react-router-dom';
+import { useState } from "react";
+import {  Link } from 'react-router-dom';
 import './Login.css';
 
 function Login() {
     const [userId, setUserId] = useState('admin');
     const [password, setPassword] = useState('admin123');
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
-    const onSubmitLogin = (e) => {
+    const onSubmitLogin = (e:any) => {
         e.preventDefault();
         if (userId === '' || password === '') {
             return alert('Please fill in all fields');

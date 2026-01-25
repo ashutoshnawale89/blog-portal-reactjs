@@ -1,9 +1,8 @@
-import { useContext, useState } from 'react'
 import './App.css'
 import Navbar from './components/navbar/Navbar'
 import Home from './components/home/Home'
 import Footer from './components/footer/Footer'
-import { BlogContext } from './context/BlogContext'
+// import { BlogContext } from './context/BlogContext'
 import Login from './components/login/Login'
 import CreateUser from './components/createuser/CreateUser'
 import ForgetPassword from './components/forgetpassword/ForgetPassword'
@@ -12,8 +11,8 @@ import { Route, Routes } from 'react-router-dom'
 
 
 function App() {
-  const { loginToken } = useContext(BlogContext);
-  console.log(loginToken);
+  // const { loginToken } = useContext(BlogContext);
+  // console.log(loginToken);
 
   return (
     <>

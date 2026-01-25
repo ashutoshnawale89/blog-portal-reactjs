@@ -2,16 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
-import { BrowserRouter } from 'react-router-dom';
-import { BlogProvider } from './context/BlogContext.tsx';
-
+import { BrowserRouter } from 'react-router-dom'
+import { BlogProvider } from './context/BlogContext.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <BlogProvider>
-    <React.StrictMode>
-      <BrowserRouter>
+  <React.StrictMode>
+    <BlogProvider>
+      <BrowserRouter basename="/blog-portal-reactjs">
         <App />
       </BrowserRouter>
-    </React.StrictMode>
-  </BlogProvider>
+    </BlogProvider>
+  </React.StrictMode>
 )

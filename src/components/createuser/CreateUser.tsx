@@ -1,5 +1,5 @@
 import "./CreateUser.css";
-import { useState, useEffect, useContext, createContext } from "react";
+import { useState } from "react";
 import { Link } from 'react-router-dom';
 
 
@@ -10,7 +10,8 @@ function CreateUser() {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
 
-    const onSubmitCreateUser = (e) => {
+    const onSubmitCreateUser = (e:any) => {
+        e.preventDefault();
         if(password !== confirmPassword) {
             alert("Passwords do not match!");
         }
@@ -28,7 +29,7 @@ function CreateUser() {
         <div className="createuser-container">
             <div className="createuser-form">
                 <h2>Create New Account</h2>
-                <form>
+                <form onSubmit={onSubmitCreateUser}>
                     <div className="form-group">
                         <label htmlFor="fullname">Full Name</label>
                         <input 
