@@ -6,7 +6,7 @@ const Navbar = () => {
 
   const [query, setQuery] = useState("");
 
-  const handleSearch =(e:any) => {
+  const handleSearch = (e: any) => {
     e.preventDefault();
     console.log("Searching for:", query);
     setQuery("");
@@ -15,7 +15,16 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <h2>Job Portal</h2>
+        <h2 style={{
+          fontSize: "2rem",
+          fontWeight: "800",
+          background: "linear-gradient(90deg, #4facfe, #00f2fe)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent"
+        }}>
+          ByteBlog
+        </h2>
+
       </div>
 
       <form className="navbar-search big-search" onSubmit={handleSearch}>

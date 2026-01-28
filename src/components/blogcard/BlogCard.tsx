@@ -2,19 +2,32 @@ import { ThumbsUp, ThumbsDown, MessageCircle, Bookmark } from "lucide-react";
 import { useState } from "react";
 import "./BlogCard.css";
 
-function BlogCard() {
+type Blog = {
+  authorImg: string;
+  category: string;
+  date: string;
+  title: string;
+  description: string;
+};
+
+type BlogCardProps = {
+  blog: Blog;
+};
+
+
+function BlogCard({ blog }: BlogCardProps) {
   const [liked, setLiked] = useState(false);
   const [disliked, setDisliked] = useState(false);
   const [saved, setSaved] = useState(false);
+
+  // Destructure blog data
+  const { authorImg, category, date, title, description } = blog;
 
   return (
     <div className="card">
       {/* Top Section */}
       <div className="top">
-        <img
-          src="https://tse2.mm.bing.net/th/id/OIP.DddVc_GnX93lvAb8aTj7tAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
-          alt="author"
-        />
+        <img src={authorImg} alt="author" />
         <button
           className="save-btn"
           style={saved ? { color: "blue" } : {}}
@@ -27,15 +40,10 @@ function BlogCard() {
       {/* Center Section */}
       <div className="center">
         <h3>
-          Tech Insights <span>Jan 24, 2026</span>
+          {category} <span>{date}</span>
         </h3>
-        <h2>
-          How React is Changing Modern Web Development
-        </h2>
-        <p>
-          React makes it painless to create interactive UIs. Learn how
-          component-based architecture improves performance and scalability.
-        </p>
+        <h2>{title}</h2>
+        <p>{description}</p>
       </div>
 
       {/* Bottom Section */}
